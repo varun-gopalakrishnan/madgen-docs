@@ -46,6 +46,8 @@
       
     
     
+      <link rel="stylesheet" href="../stylesheets/extra.css">
+    
     <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
@@ -423,45 +425,36 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#step-3-analyze" class="md-nav__link">
+  <a href="#analyze" class="md-nav__link">
     <span class="md-ellipsis">
-      Step 3: Analyze
+      Analyze
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#step-4-fix-errors" class="md-nav__link">
+  <a href="#fix-errors-view-files" class="md-nav__link">
     <span class="md-ellipsis">
-      Step 4: Fix Errors
+      Fix Errors (View Files)
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#step-5-descriptor-selection" class="md-nav__link">
+  <a href="#descriptor-selection" class="md-nav__link">
     <span class="md-ellipsis">
-      Step 5: Descriptor Selection
+      Descriptor Selection
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#step-6-click-calculate" class="md-nav__link">
+  <a href="#download-files" class="md-nav__link">
     <span class="md-ellipsis">
-      Step 6: Click Calculate
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#step-7-download-files" class="md-nav__link">
-    <span class="md-ellipsis">
-      Step 7: Download Files
+      Download Files
     </span>
   </a>
   
@@ -611,25 +604,61 @@ The page is about <strong>SMILES</strong> input. Here we have three options:</p>
 <p>You may see the info icon (<span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 9h-2V7h2v2m0 8h-2v-6h2v6M5 3h14a2 2 0 0 1 2 2v14c0 .53-.21 1.04-.59 1.41-.37.38-.88.59-1.41.59H5c-.53 0-1.04-.21-1.41-.59C3.21 20.04 3 19.53 3 19V5c0-1.11.89-2 2-2m14 16V5H5v14h14Z"/></svg></span>). On mobile, tap it, and on a personal computer, hover over it to see additional tips or information, like this:
 <a class="glightbox" href="../images/infoicon.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="info.png" src="../images/infoicon.png" /></a></p>
 </div>
-<h3 id="step-3-analyze">Step 3: Analyze</h3>
-<p>After inputting your data, click "Analyze" to process the files. If everything is correct, a green checkmark will appear next to each button.</p>
-<h3 id="step-4-fix-errors">Step 4: Fix Errors</h3>
-<p>If there are any errors:
-- Click "View Files" to open the file and check for entries in the "SmilesError" column.
-- If there are entries in "SmilesError," there is an issue with those SMILES. Correct the SMILES by clicking in the "Smiles" cell (not in "SmilesError") and editing the SMILES. Press "Update Smiles."
-- After closing the dialog, press "Analyze" again. If everything is correct, a checkmark will appear next to the corresponding input.</p>
-<h3 id="step-5-descriptor-selection">Step 5: Descriptor Selection</h3>
+<h3 id="analyze">Analyze</h3>
+<p>After inputting your data, click "Analyze" to process the files. 
+If everything is correct, a green checkmark (<span class="twemoji checkmark"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="M2.75 1h10.5c.966 0 1.75.784 1.75 1.75v10.5A1.75 1.75 0 0 1 13.25 15H2.75A1.75 1.75 0 0 1 1 13.25V2.75C1 1.784 1.784 1 2.75 1ZM2.5 2.75v10.5c0 .138.112.25.25.25h10.5a.25.25 0 0 0 .25-.25V2.75a.25.25 0 0 0-.25-.25H2.75a.25.25 0 0 0-.25.25Zm9.28 3.53-4.5 4.5a.75.75 0 0 1-1.06 0l-2-2a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l1.47 1.47 3.97-3.97a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042Z"/></svg></span>) will appear next to each button.
+If ,there is an error, an excalamation in red triangle (<span class="twemoji error_exmtn"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M256 32c14.2 0 27.3 7.5 34.5 19.8l216 368c7.3 12.4 7.3 27.7.2 40.1S486.3 480 472 480H40c-14.3 0-27.6-7.7-34.7-20.1s-7-27.8.2-40.1l216-368C228.7 39.5 241.8 32 256 32zm0 128c-13.3 0-24 10.7-24 24v112c0 13.3 10.7 24 24 24s24-10.7 24-24V184c0-13.3-10.7-24-24-24zm32 224a32 32 0 1 0-64 0 32 32 0 1 0 64 0z"/></svg></span>) will appear next to the button.</p>
+<p>The main purpose of the analyse button is filter and correct the SMILES, this would be very helpful in files. After analysing you can view the files and correct inputs and it will discuss in next section</p>
+<h3 id="fix-errors-view-files">Fix Errors (View Files)</h3>
+<p>If there are any errors or you want to change something,</p>
 <ul>
-<li>Select either "First Gen," "Second Gen," or "Both."</li>
-<li>Click "Externals" if you want to generate descriptors, or choose "RDKit" or "PubChem" (note: these options may be very slow).</li>
+<li>Click "View Files" to open the file which lead to a new window like this,
+    <a class="glightbox" href="../images/viewfilelist.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img align="center" alt="View Files" height="50%" loading="lazy" src="../images/viewfilelist.png" width="50%" /></a>
+Here you can see the status is <strong>Error</strong> which means there is an error in some of the entries. </li>
 </ul>
-<h3 id="step-6-click-calculate">Step 6: Click Calculate</h3>
-<h3 id="step-7-download-files">Step 7: Download Files</h3>
+<hr />
 <ul>
-<li>Click "Download All Files" to download your files, or "Show Files" to view the files.</li>
+<li>To inspect the file, please click view which opens the file in a new window.If there are entries in "SmilesError," there is an issue with those SMILES. Correct the SMILES by clicking in the "Smiles" cell (not in "SmilesError") and editing the SMILES. Press "Update Smiles."
+  <a class="glightbox" href="../images/smileserror.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img align="right" alt="View File" height="50%" loading="lazy" src="../images/smileserror.png" width="50%" /></a><br />
+ In the image on right side we see that "T" is not a valid SMILES, so only the row corresponding have an entry in <strong>SmilesError</strong> column all other entries are empty. Now we need to correct the T. 
+For that we click on T (we are correcting this to say [Ti] ,Tiatanium) in <strong>Smiles</strong> column <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"/></svg></span> Correct the Smile (to [Ti]) <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"/></svg></span> Press enter (<span class="keys"><kbd class="key-enter">Enter</kbd></span>) <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"/></svg></span> Click Update (<span class="twemoji" color:green="color:green"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="M1.705 8.005a.75.75 0 0 1 .834.656 5.5 5.5 0 0 0 9.592 2.97l-1.204-1.204a.25.25 0 0 1 .177-.427h3.646a.25.25 0 0 1 .25.25v3.646a.25.25 0 0 1-.427.177l-1.38-1.38A7.002 7.002 0 0 1 1.05 8.84a.75.75 0 0 1 .656-.834ZM8 2.5a5.487 5.487 0 0 0-4.131 1.869l1.204 1.204A.25.25 0 0 1 4.896 6H1.25A.25.25 0 0 1 1 5.75V2.104a.25.25 0 0 1 .427-.177l1.38 1.38A7.002 7.002 0 0 1 14.95 7.16a.75.75 0 0 1-1.49.178A5.5 5.5 0 0 0 8 2.5Z"/></svg></span>) button</li>
 </ul>
+<hr />
+<p><a class="glightbox" href="../images/smileserrorupdated.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img align="left" alt="View File" height="50%" loading="lazy" src="../images/smileserrorupdated.png" width="50%" /></a><br />
+  The image on left is after updation, you can see that the "T" is corrected to "[Ti]" and we get a notification that the entry is updated.</p>
+<p>For verification you can click Analyse again and check the status of the file. If there are no errors, you can proceed to the next step. If there are errors, you can correct them and re-analyse the file.</p>
+<div class="admonition info">
+<p class="admonition-title">Remember</p>
+<p>Only edit the "Smiles" Column, not the "SmilesError" Column. SmilesError is to idenetify erroneus entries quickly. You can use <span style="display:inline-block; transform: rotate(90deg);"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="M5.22 14.78a.75.75 0 0 0 1.06-1.06L4.56 12h8.69a.75.75 0 0 0 0-1.5H4.56l1.72-1.72a.75.75 0 0 0-1.06-1.06l-3 3a.75.75 0 0 0 0 1.06l3 3Zm5.56-6.5a.75.75 0 1 1-1.06-1.06l1.72-1.72H2.75a.75.75 0 0 1 0-1.5h8.69L9.72 2.28a.75.75 0 0 1 1.06-1.06l3 3a.75.75 0 0 1 0 1.06l-3 3Z"/></svg></span></span> to sort the column and find the erroneous entries quickly.</p>
+</div>
+<hr />
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>You can use the search bar to search for a specific entry in the file.</p>
+</div>
+<div class="admonition info">
+<p class="admonition-title">Filenames</p>
+<p>The filename starting with elements or compunds and ending with <some alphanumric> contains those entries from Elements and Compounds input.</p>
+</div>
+<h3 id="descriptor-selection">Descriptor Selection</h3>
+<ul>
+<li>Select Generations or Externals</li>
+<li>Generations will intend to generate the basic descriptors like atomic number, valence number etc. More details on this descriptor can be found in <a href="../descriptorfile/"><strong>Descriptor File</strong></a> section</li>
+<li>Click "Externals" if you want to generate descriptors, or choose "RDKit" or "PubChem"</li>
+</ul>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
+<p>This section will update in future</p>
+</div>
+<ul>
+<li>Click "Calculate" to generate the descriptors.</li>
+</ul>
+<h3 id="download-files">Download Files</h3>
+<p>Click "Download All Files" to download your files (in zip format), or "Show Files" to view the files.
+<a class="glightbox" href="../images/downloadfiles.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img align="right" alt="Download Files" height="50%" loading="lazy" src="../images/downloadfiles.png" width="50%" /></a></p>
+<hr />
 <h2 id="reminder">Reminder</h2>
-<p>This is a beta version. Please avoid uploading large files, as this is deployed on a resource-limited platform.</p>
+<p>This is a beta version. Please avoid uploading large files (it is better if you don't upload any files, we know this sounds not good and defeat the entire purpose, but please bear with us for this moment), as this is deployed on a resource-limited platform.</p>
 
 
 
