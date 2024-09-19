@@ -2,28 +2,50 @@ name: ci
 on:
   push:
     branches:
-      - master
       - main
+      - gh-pages  # Make sure to include the branch you are using
+
 permissions:
   contents: write
+
 jobs:
   deploy:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - name: Checkout code
+        uses: actions/checkout@v4
+        with:
+          ref: ver1  # Checkout the ver1 branch
+
       - name: Configure Git Credentials
         run: |
           git config user.name github-actions[bot]
           git config user.email 41898282+github-actions[bot]@users.noreply.github.com
-      - uses: actions/setup-python@v5
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
         with:
           python-version: 3.x
-      - run: echo "cache_id=$(date --utc '+%V')" >> $GITHUB_ENV
+
+      - name: Cache MkDocs Dependencies
+        run: echo "cache_id=$(date --utc '+%V')" >> $GITHUB_ENV
+
       - uses: actions/cache@v4
         with:
           key: mkdocs-material-${{ env.cache_id }}
           path: .cache
           restore-keys: |
             mkdocs-material-
-      - run: pip install mkdocs-material
-      - run: mkdocs gh-deploy --force
+
+      - name: Install MkDocs and Dependencies
+        run: pip install mkdocs-material
+
+      - name: Build MkDocs
+        run: mkdocs build --config-file documentation/mkdocs.yml --site-dir site
+
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GH_TOKEN }}  # Use the GitHub token secret
+          publish_dir: ./site  # Directory containing the built site
+          publish_branch: gh-pages  # Branch where the site will be deployed

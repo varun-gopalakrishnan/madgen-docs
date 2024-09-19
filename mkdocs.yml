@@ -1,0 +1,70 @@
+site_name: MaDGeN Documentation
+site_url:
+
+theme:
+  name: material
+  language: en
+  features:
+    - navigation.tabs
+    - navigation.sections
+    - navigation.footer
+    - toc.integrate
+    - navigation.top
+    - search.suggest
+    - search.highlight
+    - header.autohide
+    - announce.dismiss
+    - content.tabs.link
+    - content.code.annotation
+    - content.code.copy
+  palette:
+    - scheme: default
+      toggle:
+        icon: material/toggle-switch-off-outline
+        name: Switch to dark mode
+      primary: teal
+      accent: purple
+    - scheme: slate
+      toggle:
+        icon: material/toggle-switch
+        name: Switch to light mode
+      primary: teal
+      accent: lime
+
+nav:
+  - Home: introduction.md
+  - Tutorial: tutorial.md
+  - Step by Step Guide: stepguide.md
+  - Descriptor File: descriptorfile.md
+  - Acknowledgements: acknowledgements.md
+  - Flowchart: flowchart.md
+markdown_extensions:
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.inlinehilite
+  - pymdownx.keys
+  - pymdownx.snippets
+  - admonition
+  - pymdownx.arithmatex:
+      generic: true
+  - footnotes
+  - pymdownx.details
+  - pymdownx.superfences
+  - pymdownx.mark
+  - attr_list
+  - admonition
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+plugins:
+  - glightbox
+extra_css:
+  - stylesheets/extra.css
+
+copyright: |
+  &copy; 2024 <a href="" target="_blank" rel="noopener">MaDGeN</a>
