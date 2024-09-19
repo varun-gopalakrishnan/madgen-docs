@@ -447,15 +447,16 @@
 
   <h1>Flowchart</h1>
 
-<pre class="mermaid"><code>    flowchart TD
-    A[Start] --&gt; B[Login]
+<pre class="mermaid"><code>flowchart TD
+    A[Home] --&gt; B[Login]
     B --&gt; C{Login Options}
     C --&gt;|Guest Login| D[Access as Guest]
     C --&gt;|Login with Email| E[Enter Email &amp; Password]
     C --&gt;|Forgot Password| F[Reset Password] 
     D --&gt; G[Access Dashboard]
-    E --&gt; G[Access Dashboard]
+    E --&gt; G
 
+    A--&gt; AZ[Tutorial]
 
     G --&gt; H{Select Input Type}
     H --&gt;|Elements| I[Select Elements]
@@ -468,8 +469,28 @@
 
     L --&gt; M[View Files]
     M --&gt; N{File List}
-    N --&gt;|View File| O[Open File Window]
+    N --&gt;|View File| O[Open File]
+    O --&gt;|Correct| M[View Files]
     N --&gt;|Other Files| M
+    M --&gt;|Corrected Files| L
+    L --&gt; |Corrected Files| P{Descriptor Selection}
+    P --&gt;|Generations| Q{Select Generations}
+    P --&gt;|Externals| R{Select Externals}
+
+    Q --&gt;|Gen 1| U[Gen 1]
+    Q --&gt;|Gen 2| V[Gen 2]
+
+    R --&gt;|RDKit| X[RDKit]
+    R --&gt;|PubChem| Y[PubChem]
+
+    U --&gt; Z[Calculations]
+    V --&gt; Z
+    X --&gt; Z
+    Y --&gt; Z
+
+    Z --&gt; AA{View/Download}
+    AA --&gt;|Download| AB[Download Files]
+    AA --&gt;|View| AC[View Files]
 </code></pre>
 
 
