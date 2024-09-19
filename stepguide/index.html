@@ -53,7 +53,16 @@
     
     
     
-  </head>
+   <link href="../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+    html.glightbox-open { overflow: initial; height: 100%; }
+    .gslide-title { margin-top: 0px; user-select: text; }
+    .gslide-desc { color: #666; user-select: text; }
+    .gslide-image img { background: white; }
+    .gscrollbar-fixer { padding-right: 15px; }
+    .gdesc-inner { font-size: 0.75rem; }
+    body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
+    body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
+    body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}</style> <script src="../assets/javascripts/glightbox.min.js"></script></head>
   
   
     
@@ -72,7 +81,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#step-1-login" class="md-skip">
+        <a href="#home-page" class="md-skip">
           Skip to content
         </a>
       
@@ -144,45 +153,6 @@
     
     
     
-      <label class="md-header__button md-icon" for="__search">
-        
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
-      </label>
-      <div class="md-search" data-md-component="search" role="dialog">
-  <label class="md-search__overlay" for="__search"></label>
-  <div class="md-search__inner" role="search">
-    <form class="md-search__form" name="search">
-      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
-      <label class="md-search__icon md-icon" for="__search">
-        
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
-        
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
-      </label>
-      <nav class="md-search__options" aria-label="Search">
-        
-        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
-          
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
-        </button>
-      </nav>
-      
-        <div class="md-search__suggest" data-md-component="search-suggest"></div>
-      
-    </form>
-    <div class="md-search__output">
-      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
-        <div class="md-search-result" data-md-component="search-result">
-          <div class="md-search-result__meta">
-            Initializing search
-          </div>
-          <ol class="md-search-result__list" role="presentation"></ol>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-    
     
   </nav>
   
@@ -203,7 +173,7 @@
   
   
     <li class="md-tabs__item">
-      <a href=".." class="md-tabs__link">
+      <a href="../introduction/" class="md-tabs__link">
         
   
     
@@ -285,6 +255,23 @@
   
 
       
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../flowchart.md" class="md-tabs__link">
+        
+  
+    
+  
+  Flowchart
+
+      </a>
+    </li>
+  
+
+      
     </ul>
   </div>
 </nav>
@@ -327,7 +314,7 @@
   
   
     <li class="md-nav__item">
-      <a href=".." class="md-nav__link">
+      <a href="../introduction/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -409,18 +396,27 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#step-1-login" class="md-nav__link">
+  <a href="#home-page" class="md-nav__link">
     <span class="md-ellipsis">
-      Step 1: Login
+      Home Page:
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#step-2-smile-input" class="md-nav__link">
+  <a href="#login" class="md-nav__link">
     <span class="md-ellipsis">
-      Step 2: Smile Input
+      Login
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#dashboard" class="md-nav__link">
+    <span class="md-ellipsis">
+      Dashboard
     </span>
   </a>
   
@@ -528,6 +524,26 @@
   
 
     
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../flowchart.md" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Flowchart
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
   </ul>
 </nav>
                   </div>
@@ -545,22 +561,63 @@
 
   <h1>Step by Step Guide</h1>
 
-<h3 id="step-1-login">Step 1: Login</h3>
+<h3 id="home-page">Home Page:</h3>
+<p>When you open the website, you will be directed to the home page, which has two options:</p>
 <ul>
-<li>You can use either guest login or login with your email ID. In this version 0.1.0, we suggest using guest login or logging in with a temporary email. For this, you can use temporary mail services.</li>
+<li><strong>Tutorial</strong>: This will direct you to this documentation page. (If you are seeing this page, you already know what that button does.)</li>
+<li><strong>Start</strong>: This will direct you to the login page.</li>
 </ul>
-<h3 id="step-2-smile-input">Step 2: Smile Input</h3>
-<p>You can input SMILES in three forms:
-  - <strong>Elemental</strong>: To input elemental SMILES, a periodic table will open, allowing you to select elements and click submit.
-  - <strong>Compound SMILES</strong>: To input SMILES of individual compounds, for example, Methane (CH4) would be entered as <code>[H]C([H])([H])[H]</code>. After each entry, press enter and then submit.
-  - <strong>Upload Files</strong>: You can upload CSV or XLSX files. Files should have a header column named "Smiles".</p>
+<h3 id="login">Login</h3>
+<p>The typical login page allows you to log in with your email ID or as a guest.<br />
+<a class="glightbox" href="../images/login.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Login Page" src="../images/login.png" /></a><br />
+For now, we strongly recommend using guest login (<strong>CONTINUE AS GUEST</strong>) or logging in with a temporary email ID (you can use temporary mail services). We’d love to see how logging in with an email ID works, so if you want to join our experiment, you are free to do so.</p>
+<div class="admonition warning">
+<p class="admonition-title">Remember</p>
+<p><strong>Please note that all files will be deleted 1 hour after login. If you are still using the site after 1 hour, please log out and log in again (currently, we have not implemented auto-logout).</strong></p>
+</div>
+<h3 id="dashboard">Dashboard</h3>
+<p>Once you are logged in, you will be directed to the dashboard.<br />
+<a class="glightbox" href="../images/dashboard.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Dashboard" src="../images/dashboard.png" /></a><br />
+The page is about <strong>SMILES</strong> input. Here we have three options:</p>
+<ul>
+<li><strong>Elemental</strong>: To input elemental SMILES, a periodic table will open, allowing you to select elements and click submit (only elements are allowed at this stage).<br />
+<a class="glightbox" href="../images/periodictable.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img align="right" alt="Elemental" height="50%" loading="lazy" src="../images/periodictable.png" width="50%" /></a><br />
+  The image on the right is the periodic table. You can select elements by clicking on them. After selecting the elements, click "Submit."</li>
+</ul>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
+<p>Currently, only elements can be selected (multiple elements are allowed), but formulas are not allowed. For example, if you select C and O, it will be considered as elemental Carbon and Oxygen, not as Carbon Monoxide.</p>
+</div>
+<ul>
+<li><strong>Compound SMILES</strong>: To input SMILES of individual compounds. For example, Methane (CH₄) would be entered as <code>[H]C([H])([H])[H]</code>. After each entry, press enter.<br />
+<a class="glightbox" href="../images/compoundsmiles.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img align="left" alt="Compound" height="50%" loading="lazy" src="../images/compoundsmiles.png" width="50%" /></a><br />
+  When an entry is recorded, you will see a green shade around the SMILES. In the image on the left, we entered three SMILES. After each SMILES entry, press enter and then input the next SMILES (one by one). When finished, click the submit button.</li>
+</ul>
+<hr />
+<ul>
+<li><strong>Upload Files</strong>: You can upload CSV or XLSX files. Files should have a header column named "Smiles."<br />
+<a class="glightbox" href="../images/smiles_file.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img align="right" alt="Upload" height="20px" loading="lazy" src="../images/smiles_file.png" width="110px" /></a><br />
+  The image on the right shows a sample file. The header in row 1 should be exactly "Smiles."<br />
+<a class="glightbox" href="../images/uploads.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img align="left" alt="Upload" height="50%" loading="lazy" src="../images/uploads.png" width="50%" /></a><br />
+  Click "Choose File" to select a file from your computer. After selecting the file, click "Submit."</li>
+</ul>
+<div class="admonition tip">
+<p class="admonition-title">Multiple Inputs</p>
+<p>In the above image, you can see that all three options are in black, meaning they are selected. You can use all three inputs at the same time.</p>
+</div>
+<hr />
+<div class="admonition info">
+<p class="admonition-title">Info</p>
+<p>You may see the info icon (<span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 9h-2V7h2v2m0 8h-2v-6h2v6M5 3h14a2 2 0 0 1 2 2v14c0 .53-.21 1.04-.59 1.41-.37.38-.88.59-1.41.59H5c-.53 0-1.04-.21-1.41-.59C3.21 20.04 3 19.53 3 19V5c0-1.11.89-2 2-2m14 16V5H5v14h14Z"/></svg></span>). On mobile, tap it, and on a personal computer, hover over it to see additional tips or information, like this:
+<a class="glightbox" href="../images/infoicon.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="info.png" src="../images/infoicon.png" /></a></p>
+</div>
 <h3 id="step-3-analyze">Step 3: Analyze</h3>
-<p>After inputting your data, click "Analyze" to process the files. If everything is correct, a green check mark will appear next to each button.</p>
+<p>After inputting your data, click "Analyze" to process the files. If everything is correct, a green checkmark will appear next to each button.</p>
 <h3 id="step-4-fix-errors">Step 4: Fix Errors</h3>
 <p>If there are any errors:
 - Click "View Files" to open the file and check for entries in the "SmilesError" column.
-- If there are entries in the "SmilesError," there is an issue with those SMILES. Correct the SMILES by clicking in the "Smiles" cell (not in "SmilesError") and editing the SMILES. Press "Update Smiles."
-- After closing the dialog, press "Analyze" again. If everything is correct, a tick will appear next to the corresponding input.</p>
+- If there are entries in "SmilesError," there is an issue with those SMILES. Correct the SMILES by clicking in the "Smiles" cell (not in "SmilesError") and editing the SMILES. Press "Update Smiles."
+- After closing the dialog, press "Analyze" again. If everything is correct, a checkmark will appear next to the corresponding input.</p>
 <h3 id="step-5-descriptor-selection">Step 5: Descriptor Selection</h3>
 <ul>
 <li>Select either "First Gen," "Second Gen," or "Both."</li>
@@ -572,7 +629,7 @@
 <li>Click "Download All Files" to download your files, or "Show Files" to view the files.</li>
 </ul>
 <h2 id="reminder">Reminder</h2>
-<p>This is a beta version. Please don't input large files as this is deployed on a resource-limited platform.</p>
+<p>This is a beta version. Please avoid uploading large files, as this is deployed on a resource-limited platform.</p>
 
 
 
@@ -678,5 +735,7 @@
       <script src="../assets/javascripts/bundle.af256bd8.min.js"></script>
       
     
-  </body>
+  <script id="init-glightbox">const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});
+document$.subscribe(() => { lightbox.reload() });
+</script></body>
 </html>
